@@ -13,9 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="500"
-        android:layout_marginTop="0dp"
+        app:layout_constraintHeight_percent="0.35"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHeight_percent="0.35"/>
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/TotalMoneyLabel"
@@ -46,24 +46,25 @@
         app:layout_constraintTop_toBottomOf="@+id/TotalMoneyLabel" />
 
     <Button
-        android:id="@+id/ViewPreiousButton"
+        android:id="@+id/AddNewButton"
         android:layout_width="350dp"
         android:layout_height="58dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/view_previous_revenue_expense"
-        app:layout_constraintBottom_toTopOf="@+id/AddNewButton"
+        android:text="@string/add_new_revenue_expense"
+        app:layout_constraintBottom_toTopOf="@+id/ViewPreviousButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
     <Button
-        android:id="@+id/AddNewButton"
+        android:id="@+id/ViewPreviousButton"
         android:layout_width="355dp"
         android:layout_height="57dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/add_new_revenue_expense"
+        android:text="@string/view_previous_revenue_expense"
+        android:onClick="ViewPrevious"
         app:layout_constraintBottom_toTopOf="@+id/ChartBalanceButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <Button
         android:id="@+id/ChartBalanceButton"
