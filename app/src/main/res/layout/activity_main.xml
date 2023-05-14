@@ -2,10 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LayoutID"
+    android:id="@+id/Layout_mainactivity_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Space
@@ -18,37 +17,6 @@
         tools:layout_editor_absoluteX="0dp" />
 
 
-    <Button
-        android:id="@+id/AddNewButton"
-        android:layout_width="350dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="20dp"
-        android:onClick="AddNew"
-        android:text="@string/add_new_revenue_expense"
-        app:layout_constraintBottom_toTopOf="@+id/ViewPreviousButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/ViewPreviousButton"
-        android:layout_width="355dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="20dp"
-        android:onClick="ViewPrevious"
-        android:text="@string/view_previous_revenue_expense"
-        app:layout_constraintBottom_toTopOf="@+id/ChartBalanceButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/ChartBalanceButton"
-        android:layout_width="350dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/chart_balance"
-        app:layout_constraintBottom_toTopOf="@+id/space2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Space
         android:id="@+id/space2"
@@ -76,7 +44,7 @@
         android:layout_height="wrap_content"
         android:text="@string/temp_money"
         android:textSize="12pt"
-        app:layout_constraintBottom_toTopOf="@+id/AddNewButton"
+        app:layout_constraintBottom_toTopOf="@+id/txv_balance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.140"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +57,7 @@
         android:layout_height="wrap_content"
         android:text="@string/temp_money"
         android:textSize="12pt"
-        app:layout_constraintBottom_toTopOf="@+id/AddNewButton"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.860"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,11 +81,11 @@
         android:layout_height="wrap_content"
         android:text="@string/temp_money"
         android:textSize="20pt"
-        app:layout_constraintBottom_toTopOf="@+id/AddNewButton"
+        app:layout_constraintBottom_toTopOf="@+id/space2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/space1"
-        app:layout_constraintVertical_bias="0.335" />
+        app:layout_constraintVertical_bias="0.148" />
 
     <TextView
         android:id="@+id/textView6"
@@ -130,5 +98,96 @@
         app:layout_constraintStart_toStartOf="@+id/txv_balance"
         app:layout_constraintTop_toBottomOf="@+id/space1"
         app:layout_constraintVertical_bias="0.882" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="1200px"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/space2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_balance"
+        app:layout_constraintVertical_bias="0.91">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1200dp"
+            android:isScrollContainer="true">
+
+
+            <Button
+                android:id="@+id/btn_AddExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:onClick="AddNew"
+                android:text="@string/str_add_new_expense"
+                android:layout_alignParentTop="true"/>
+
+            <Button
+                android:id="@+id/btn_ModifyIncome"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginBottom="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:onClick="ViewPrevious"
+                android:text="@string/str_modifyIncome"
+                android:layout_below="@id/btn_AddExpenses"/>
+
+            <Button
+                android:id="@+id/btn_ViewExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginBottom="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:onClick="ViewPrevious"
+                android:text="@string/str_view_expenses"
+                android:layout_below="@id/btn_ModifyIncome"/>
+
+            <Button
+                android:id="@+id/btn_ChartBalance"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginBottom="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/str_chart_balance"
+                android:layout_below="@id/btn_ViewExpenses"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_below="@id/btn_ChartBalance"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="500dp"
+                />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pie_expensesCategories"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/btn_ChartBalance"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
