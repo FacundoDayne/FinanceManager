@@ -71,7 +71,6 @@
         android:id="@+id/ChartBalanceButton"
         android:layout_width="350dp"
         android:layout_height="58dp"
-        android:layout_marginBottom="32dp"
         android:text="@string/chart_balance"
         app:layout_constraintBottom_toTopOf="@+id/space2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,9 +80,7 @@
         android:id="@+id/space2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="500"
-        android:layout_marginTop="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_percent="0.05"/>
+        app:layout_constraintHeight_percent="0.12"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
