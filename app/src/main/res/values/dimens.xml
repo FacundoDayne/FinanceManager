@@ -3,5 +3,6 @@
 
     <dimen name="twentyPercent">0.2</dimen>
     <dimen name="margin_bottom">0</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>
