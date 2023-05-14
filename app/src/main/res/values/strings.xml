@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">FinanceManager</string>
     <string name="total_money">Total Money</string>
-    <string name="php_20_00">Php 20.00</string>
+    <string name="total_spending">Spent</string>
+    <string name="current_budget_balance">Balance</string>
+    <string name="temp_money">0,000,000.00</string>
     <string name="view_previous_revenue_expense">View Previous Revenue/Expense</string>
     <string name="add_new_revenue_expense">Add new Revenue/Expense</string>
     <string name="chart_balance">Chart Balance</string>

@@ -13,37 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="500"
-        app:layout_constraintHeight_percent="0.30"
+        app:layout_constraintHeight_percent="0.03"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:id="@+id/TotalMoneyLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginEnd="167dp"
-        android:text="@string/total_money"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/space1" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/php_20_00"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/space3" />
-
-    <Space
-        android:id="@+id/space3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.025"
-        app:layout_constraintTop_toBottomOf="@+id/TotalMoneyLabel" />
 
     <Button
         android:id="@+id/AddNewButton"
@@ -55,17 +28,17 @@
         app:layout_constraintBottom_toTopOf="@+id/ViewPreviousButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/ViewPreviousButton"
         android:layout_width="355dp"
         android:layout_height="57dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/view_previous_revenue_expense"
         android:onClick="ViewPrevious"
+        android:text="@string/view_previous_revenue_expense"
         app:layout_constraintBottom_toTopOf="@+id/ChartBalanceButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/ChartBalanceButton"
@@ -81,9 +54,81 @@
         android:id="@+id/space2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="500"
         android:layout_marginTop="0dp"
+        android:layout_weight="500"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_percent="0.05"/>
+        app:layout_constraintHeight_percent="0.05" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_money"
+        app:layout_constraintBottom_toTopOf="@+id/txv_totalmoney"
+        app:layout_constraintEnd_toEndOf="@+id/txv_totalmoney"
+        app:layout_constraintStart_toStartOf="@+id/txv_totalmoney"
+        app:layout_constraintTop_toBottomOf="@+id/space1"
+        />
+
+    <TextView
+        android:id="@+id/txv_totalmoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temp_money"
+        android:textSize="12pt"
+        app:layout_constraintBottom_toTopOf="@+id/AddNewButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.140"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space1"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <TextView
+        android:id="@+id/txv_expenses_peek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temp_money"
+        android:textSize="12pt"
+        app:layout_constraintBottom_toTopOf="@+id/AddNewButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.860"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space1"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_spending"
+        app:layout_constraintBottom_toTopOf="@+id/txv_expenses_peek"
+        app:layout_constraintEnd_toEndOf="@+id/txv_expenses_peek"
+        app:layout_constraintStart_toStartOf="@+id/txv_expenses_peek"
+        app:layout_constraintTop_toBottomOf="@+id/space1"
+        app:layout_constraintVertical_bias="0.444" />
+
+    <TextView
+        android:id="@+id/txv_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temp_money"
+        android:textSize="20pt"
+        app:layout_constraintBottom_toTopOf="@+id/AddNewButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space1"
+        app:layout_constraintVertical_bias="0.335" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_budget_balance"
+        app:layout_constraintBottom_toTopOf="@+id/txv_balance"
+        app:layout_constraintEnd_toEndOf="@+id/txv_balance"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/txv_balance"
+        app:layout_constraintTop_toBottomOf="@+id/space1"
+        app:layout_constraintVertical_bias="0.882" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
