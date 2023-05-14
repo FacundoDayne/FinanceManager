@@ -1,8 +1,8 @@
 package com.example.financemanager;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 
 public class MainActivity extends AppCompatActivity {
 
