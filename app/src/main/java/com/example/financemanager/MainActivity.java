@@ -12,16 +12,25 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Button ViewPreviousButton;
+    Button AddNewButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ViewPreviousButton = (Button)findViewById(R.id.ViewPreviousButton);
+        AddNewButton = (Button)findViewById(R.id.AddNewButton);
     }
 
     public void ViewPrevious(View view){
         Intent intent = new Intent(this, ViewPrevious.class);
         startActivity(intent);
         Toast.makeText(getApplicationContext(),"Now Viewing Previous Revenues and Expenses", Toast.LENGTH_SHORT).show();
+    }
+
+    public void AddNew(View view){
+        Intent intent = new Intent(this, AddNew.class);
+        startActivity(intent);
+        Toast.makeText(getApplicationContext(),"Now Adding New Revenues and Expenses", Toast.LENGTH_SHORT).show();
     }
 }
