@@ -5,10 +5,13 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.ArraySet;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Spinner;
+
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         AddNewButton = (Button)findViewById(R.id.btn_AddExpenses);
 
         ConstraintLayout mainlayout = (ConstraintLayout) findViewById(R.id.Layout_mainactivity_parent);
+
 
         TextView txv_balance = (TextView) findViewById(R.id.txv_balance);
         TextView txv_spent = (TextView) findViewById(R.id.txv_expenses_peek);
