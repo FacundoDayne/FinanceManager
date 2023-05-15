@@ -4,7 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNew">
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/NameLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of transaction"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <EditText
+        android:id="@+id/nameTxt"
+        android:layout_width="347dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:hint="Name of transaction"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <RadioButton
+        android:id="@+id/rbtnExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expenses"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <TextView
+        android:id="@+id/typeLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of Transaction"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <RadioButton
+        android:id="@+id/rbtnRevenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Revenue"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="347dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:hint="Amount"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="437dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="399dp" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="338dp"
+        android:layout_height="42dp"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="597dp" />
 
 
     <TextView
